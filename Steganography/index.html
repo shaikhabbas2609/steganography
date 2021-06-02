@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>Imessage | Hide Message in image</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	</head>
+	<body>
+		<div id="main">
+            <nav 
+                class="navbar navbar-dark text-center bg-primary
+                      d-flex justify-content-center align-items-center p-3"
+            >
+                <h5 class="fw-normal navbar-brand">IMessage</h5>
+            </nav>
+            <div class="container">
+                <div id="left" class="mt-3">
+                    <input id="file" type="file" class="border border-dark p-1 w-100"/>
+                    <h6 class="mt-2">Text:<span id="capacity"></span></h6>
+                    <textarea style="resize: none;height: 20vh;" id="text" class="w-100 border border-dark p-1 mt-2"></textarea>
+                    <div class="btns">
+                        <button id="hide" class="btn btn-outline-primary">Hide</button>
+                        <button id="read" class="btn btn-outline-primary">Read</button>
+                    </div>
+                </div>
+                <div id="right" class="mt-3 d-flex flex-column justify-content-center align-items-center">
+                    <div id="original" class="half">
+                        <h2>Plain Image:</h2>
+                        <img id="img" src="" style="width:50%;"/>
+                    </div>
+                    <div id="stego" class="half text-center">
+                        <h2>Encoded Image:</h2>
+                        <img id="cover" src="" style="width:50%;"/>
+                        <a id="download" class="btn btn-outline-primary d-none" download="" rel="nofollow">Download</a>
+                    </div>
+                    <div id="messageArea" class="invisible">
+                        <h3>Message:</h3>
+                        <div id="message" class="fw-bold fs-1 mb-5 text-center"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<script type="text/javascript" src="./script/steganography.js"></script>
+        <script src="./script/index.js"></script>
+	</body>
+</html>
